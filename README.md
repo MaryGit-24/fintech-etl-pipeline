@@ -4,6 +4,17 @@
 
 This project is a functional Data Engineering Pipeline designed to simulate a fintech user-management system (inspired by the Moniepoint tech stack). It extracts raw user data from a REST API, performs rigorous data cleaning and transformation using Python, and loads the structured data into both a CSV backup and a SQL Relational Database.
 
+...
+
+📂 Updated File Structure Map
+
+├── transaction_pipeline.py      # Core ETL engine (Local SQL & CSV)
+├── cloud_simulation.py         # Google Cloud Storage (GCS) integration logic
+├── query_data.py               # SQL Analysis script for data mining
+├── README.md                   # Project documentation & Cloud Roadmap
+├── user_transaction_db.db            # SQLite Data Warehouse
+└── cleaned_user_transactions.csv # Processed flat-file backup
+
 ''''
 
 🏗️ Tech Stack
@@ -74,6 +85,17 @@ Query the Data:
 
 Bash
 python query_data.py
+
+Cloud Simulation
+
+Install GCP Libraries:
+Bash:
+pip install google-cloud-storage
+
+Review the Logic:
+python cloud_simulation.py
+
+# Note: This script serves as a structural template for GCS integration and requires a Service Account JSON key for live cloud execution.
 
 ''''
 
