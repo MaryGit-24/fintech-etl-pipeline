@@ -1,11 +1,13 @@
 🚀 Fintech Data Pipeline (ETL) & SQL Warehouse
 
 📌 Project Overview
+
 This project is a functional Data Engineering Pipeline designed to simulate a fintech user-management system (inspired by the Moniepoint tech stack). It extracts raw user data from a REST API, performs rigorous data cleaning and transformation using Python, and loads the structured data into both a CSV backup and a SQL Relational Database.
 
 ''''
 
 🏗️ Tech Stack
+
 Language: Python 3.14
 
 Libraries: Pandas, Requests, SQLAlchemy
@@ -19,11 +21,13 @@ Concepts: API Integration, Data Quality (Handling Nulls), Data Standardization, 
 ''''
 
 🛠️ Pipeline Workflow
-Extraction (API): * Connects to an external REST API using the requests library.
+
+1. Extraction (API): * Connects to an external REST API using the requests library.
 
 Implements error handling to ensure pipeline stability if the API is down.
 
-Transformation (Data Cleaning):
+
+2. Transformation (Data Engineering):
 
 Flattening: Unpacks nested JSON objects (Address -> City).
 
@@ -33,7 +37,8 @@ Standardization: Converts location data to uppercase for database indexing consi
 
 Feature Engineering: Extracts the email_domain from raw email strings to provide market insights.
 
-Loading (Multi-Destination):
+
+3. Loading (Multi-Destination):
 
 Flat File: Saves a version to cleaned_user_transactions.csv.
 
@@ -44,17 +49,19 @@ Reporting: * Generates a Business Summary Report directly in the logs, identifyi
 ''''
 
 📂 File Structure
+
 transaction_pipeline.py: The main ETL script that runs the pipeline.
 
 query_data.py: A SQL analysis script to query the database and generate insights.
 
-moniepoint_db.db: The generated SQL database (Source of Truth).
+users_transaction_db.db: The generated SQL database (Source of Truth).
 
-cleaned_user_transactions.csv: The processed output file.
+user_transactions_backup.csv: The processed output file.
 
 ''''
 
 🚀 How to Run
+
 Install Dependencies:
 
 Bash
@@ -71,6 +78,7 @@ python query_data.py
 ''''
 
 📈 Future Roadmap (Phase 3 & 4)
+
 [ ] Containerization: Wrap the pipeline in Docker for consistent deployment.
 
 [ ] Orchestration: Migrate the execution logic to Apache Airflow DAGs.
@@ -80,4 +88,5 @@ python query_data.py
 ''''
 
 👩‍🏫 Author
+
 Udo Mary | Women Techster Data Science and Engineering Alumi
