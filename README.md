@@ -8,12 +8,17 @@ This project is a functional Data Engineering Pipeline designed to simulate a fi
 
 📂 Updated File Structure Map
 
-├── transaction_pipeline.py      # Core ETL engine (Local SQL & CSV)
-├── cloud_simulation.py         # Google Cloud Storage (GCS) integration logic
-├── query_data.py               # SQL Analysis script for data mining
-├── README.md                   # Project documentation & Cloud Roadmap
+├── transaction_pipeline.py           # Core ETL engine (Local SQL & CSV)
+
+├── cloud_simulation.py               # Google Cloud Storage (GCS) integration logic
+
+├── query_data.py                     # SQL Analysis script for data mining
+
+├── README.md                         # Project documentation & Cloud Roadmap
+
 ├── user_transaction_db.db            # SQLite Data Warehouse
-└── cleaned_user_transactions.csv # Processed flat-file backup
+
+└── cleaned_user_transactions.csv     # Processed flat-file backup
 
 ''''
 
